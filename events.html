@@ -203,6 +203,12 @@
             return `${dayName} ${day} ${month} ${year} at ${hour12}:${minStr} ${period}`;
         }
 
+        function escapeHtml(str) {
+            const div = document.createElement('div');
+            div.appendChild(document.createTextNode(str || ''));
+            return div.innerHTML;
+        }
+
         function renderEvents(events) {
             const container = document.getElementById('events-list');
 
@@ -214,18 +220,19 @@
             const html = events.map(function (event) {
                 const colour  = CATEGORY_COLOURS[event.category] || CATEGORY_COLOURS.other;
                 const badgeHtml = event.category
-                    ? `<span class="category-badge" style="background:${colour}">${event.category}</span>`
+                    ? `<span class="category-badge" style="background:${colour}">${escapeHtml(event.category)}</span>`
                     : '';
                 const locationHtml = event.location
                     ? `<p class="text-gray-500 text-sm mt-1">
                            <svg class="inline-block w-4 h-4 mr-1 -mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                           </svg>${event.location}
+                           </svg>${escapeHtml(event.location)}
                        </p>`
                     : '';
-                const rsvpHtml = event.external_url
-                    ? `<a href="${event.external_url}" target="_blank" rel="noopener noreferrer"
+                const safeUrl = (event.external_url || '').startsWith('http') ? event.external_url : null;
+                const rsvpHtml = safeUrl
+                    ? `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer"
                            class="inline-block mt-4 bg-saffron text-navy px-5 py-2 rounded-lg font-semibold text-sm hover:bg-orange-400 transition-all duration-200">
                            RSVP &rarr;
                        </a>`
@@ -235,7 +242,7 @@
                     <div class="event-card bg-white rounded-lg shadow-md p-6 mb-6">
                         <p class="text-sm text-gray-400 font-medium mb-2">${formatDate(event.event_date)}</p>
                         <div class="flex flex-wrap items-start gap-3 mb-1">
-                            <h2 class="text-xl font-bold text-navy leading-snug">${event.title}</h2>
+                            <h2 class="text-xl font-bold text-navy leading-snug">${escapeHtml(event.title)}</h2>
                             ${badgeHtml}
                         </div>
                         ${locationHtml}
