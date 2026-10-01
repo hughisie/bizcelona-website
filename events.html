@@ -1,272 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- SEO Meta Tags -->
-    <title>Events | Bizcelona — Business Community in Barcelona</title>
-    <meta name="description" content="Upcoming Bizcelona events — networking, workshops, and social gatherings for Barcelona's business community.">
+    <title>Events | Bizcelona Barcelona Business Community</title>
+    <meta name="description" content="Bizcelona events in Barcelona: a co-working day every two weeks and one quality event a month. See what is coming up and RSVP to join us.">
     <link rel="canonical" href="https://bizcelona.com/events.html">
+    <meta name="theme-color" content="#1a202c">
 
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Events | Bizcelona" />
-    <meta property="og:description" content="Join us at our next Bizcelona gathering. Upcoming events for Barcelona's business community." />
-    <meta property="og:image" content="https://bizcelona.com/images/og-image.jpg" />
-    <meta property="og:url" content="https://bizcelona.com/events.html" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Bizcelona">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:title" content="Events | Bizcelona">
+    <meta property="og:description" content="A co-working day every two weeks and one quality event a month, for Barcelona's business community.">
+    <meta property="og:url" content="https://bizcelona.com/events.html">
+    <meta property="og:image" content="https://bizcelona.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Bizcelona logo in off-white on navy, with the line Curated. Collaborative. Connected.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Events | Bizcelona">
+    <meta name="twitter:description" content="A co-working day every two weeks and one quality event a month, for Barcelona's business community.">
+    <meta name="twitter:image" content="https://bizcelona.com/images/og-image.jpg">
 
-    <!-- Favicon -->
-    <link rel="icon" href="./images/favicon.png" type="image/png" />
+    <link rel="icon" href="./images/favicon-48.png" type="image/png" sizes="48x48">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="./fonts/BricolageGrotesque-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./css/site.css">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'inter': ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        'navy': '#1a202c',
-                        'saffron': '#f6ad55',
-                        'off-white': '#fafafa',
-                        'beige': '#f7fafc',
-                    }
-                }
-            }
-        }
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://bizcelona.com/#organization",
+      "name": "Bizcelona",
+      "url": "https://bizcelona.com/",
+      "logo": "https://bizcelona.com/images/logo-navy.png",
+      "sameAs": ["https://www.linkedin.com/company/110331955"]
+    }
     </script>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/styles.css">
-
-    <style>
-        .category-badge {
-            display: inline-block;
-            padding: 2px 10px;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #fff;
-            text-transform: capitalize;
-        }
-        .event-card {
-            transition: box-shadow 0.2s, transform 0.2s;
-        }
-        .event-card:hover {
-            box-shadow: 0 8px 30px rgba(26,32,44,0.12);
-            transform: translateY(-2px);
-        }
-    </style>
 </head>
-<body class="font-inter text-navy bg-off-white">
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="index.html">
-                        <img src="./images/White BG.png" alt="Bizcelona" class="h-8 w-auto max-h-10">
-                    </a>
-                </div>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="index.html" aria-label="Bizcelona, home">
+                <img src="./images/logo-offwhite.png" alt="Bizcelona" width="763" height="327">
+            </a>
 
-                <!-- Desktop Navigation -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="index.html#hero" class="nav-link text-navy hover:text-saffron transition-colors duration-200">Home</a>
-                        <a href="index.html#about" class="nav-link text-navy hover:text-saffron transition-colors duration-200">About</a>
-                        <a href="index.html#rules" class="nav-link text-navy hover:text-saffron transition-colors duration-200">Guidelines</a>
-                        <a href="index.html#partnerships" class="nav-link text-navy hover:text-saffron transition-colors duration-200">Partnerships</a>
-                        <a href="events.html" class="nav-link text-saffron font-semibold transition-colors duration-200" aria-current="page">Events</a>
-                        <a href="index.html#apply" class="btn-primary bg-saffron text-navy px-4 py-2 rounded-md font-semibold hover:bg-orange-400 transition-all duration-300 transform hover:scale-105 shadow-sm">Apply</a>
-                    </div>
-                </div>
+            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                Menu
+            </button>
 
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button type="button" class="mobile-menu-button text-navy hover:text-saffron focus:outline-none focus:text-saffron transition-colors duration-200" aria-label="Toggle menu">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Navigation -->
-        <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-200">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html#hero" class="block px-3 py-2 text-navy hover:text-saffron transition-colors duration-200">Home</a>
-                <a href="index.html#about" class="block px-3 py-2 text-navy hover:text-saffron transition-colors duration-200">About</a>
-                <a href="index.html#rules" class="block px-3 py-2 text-navy hover:text-saffron transition-colors duration-200">Guidelines</a>
-                <a href="index.html#partnerships" class="block px-3 py-2 text-navy hover:text-saffron transition-colors duration-200">Partnerships</a>
-                <a href="events.html" class="block px-3 py-2 text-saffron font-semibold" aria-current="page">Events</a>
-                <a href="index.html#apply" class="block px-3 py-2 text-navy hover:text-saffron transition-colors duration-200">Apply</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Page Header -->
-    <header class="pt-28 pb-10 bg-white border-b border-gray-100">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-navy mb-4">Upcoming Events</h1>
-            <p class="text-lg text-gray-600">Join us at our next Bizcelona gathering.</p>
+            <nav id="site-nav" class="nav-panel" aria-label="Main">
+                <ul>
+                    <li><a class="nav-link" href="index.html#hero">Home</a></li>
+                    <li><a class="nav-link" href="index.html#about">About</a></li>
+                    <li><a class="nav-link" href="index.html#rules">Guidelines</a></li>
+                    <li><a class="nav-link" href="index.html#partnerships">Partnerships</a></li>
+                    <li><a class="nav-link" href="events.html" aria-current="page">Events</a></li>
+                    <li><a class="btn btn-primary" href="index.html#apply">Apply</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Events Section -->
-    <main class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div id="events-list">
-            <!-- Loading state -->
-            <p class="text-center text-gray-500 text-lg py-12">Loading events...</p>
-        </div>
+    <main id="main">
+        <section class="page-head on-navy" aria-labelledby="events-title">
+            <div class="wrap">
+                <span class="label">Show up</span>
+                <h1 id="events-title">Events</h1>
+                <p class="lede mt-5">A co-working day every two weeks, and one quality event a month.</p>
+            </div>
+        </section>
+
+        <section class="section on-light" aria-label="Upcoming events">
+            <div class="wrap">
+                <div id="events-list" class="events-list" aria-live="polite" aria-busy="true">
+                    <p class="muted">Loading events&hellip;</p>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-navy text-white py-12 mt-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <img src="./images/bizcelona-logo.png" alt="Bizcelona" class="h-8 w-auto mx-auto mb-4 filter invert">
-                <p class="text-gray-300 mb-2">&copy; 2025 Bizcelona. All rights reserved.</p>
-                <p class="text-gray-400">Built with love in Barcelona.</p>
+    <footer class="site-footer">
+        <div class="wrap footer-grid">
+            <div>
+                <img src="./images/logo-offwhite.png" alt="Bizcelona" width="763" height="327">
+                <p class="mt-4 footer-meta">&copy; 2026 Bizcelona. Built with love in Barcelona.</p>
             </div>
+            <ul class="footer-links">
+                <li><a href="index.html#apply">Apply</a></li>
+                <li><a href="https://www.linkedin.com/company/110331955" rel="noopener">LinkedIn</a></li>
+                <li><a href="mailto:hello@bizcelona.com">hello@bizcelona.com</a></li>
+            </ul>
         </div>
     </footer>
 
-    <!-- Mobile menu toggle -->
+    <script src="./js/site.js" defer></script>
     <script>
-        const mobileMenuButton = document.querySelector('.mobile-menu-button');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', function () {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
+        (function () {
+            var API = 'https://app.bizcelona.com/api/events/public';
+            var DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            var list = document.getElementById('events-list');
 
-        // Navbar background on scroll
-        const navbar = document.getElementById('navbar');
-        if (navbar) {
-            window.addEventListener('scroll', function () {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('bg-white/95');
-                    navbar.classList.remove('bg-white/90');
-                } else {
-                    navbar.classList.add('bg-white/90');
-                    navbar.classList.remove('bg-white/95');
-                }
-            });
-        }
-    </script>
+            function esc(str) {
+                var d = document.createElement('div');
+                d.appendChild(document.createTextNode(str == null ? '' : String(str)));
+                return d.innerHTML.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+            }
+            function pad(n) { return n < 10 ? '0' + n : String(n); }
 
-    <!-- Events loader -->
-    <script>
-        const CATEGORY_COLOURS = {
-            networking: '#3b82f6',
-            workshop:   '#a855f7',
-            social:     '#f97316',
-            other:      '#22c55e',
-        };
-
-        function formatDate(dateString) {
-            // dateString may be "2026-05-12" or a full ISO timestamp
-            const date = new Date(dateString);
-            // Guard against bad data
-            if (isNaN(date.getTime())) return dateString;
-
-            const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-            const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-
-            const dayName  = days[date.getUTCDay()];
-            const day      = date.getUTCDate();
-            const month    = months[date.getUTCMonth()];
-            const year     = date.getUTCFullYear();
-            const hours    = date.getUTCHours();
-            const minutes  = date.getUTCMinutes();
-
-            // Only show time if it's not midnight (i.e. a real time was set)
-            if (hours === 0 && minutes === 0) {
-                return `${dayName} ${day} ${month} ${year}`;
+            // Returns {date, time}; time is empty when the event has no real start time.
+            function formatWhen(value) {
+                var d = new Date(value);
+                if (isNaN(d.getTime())) return { date: esc(value), time: '' };
+                var date = DAYS[d.getUTCDay()] + ' ' + d.getUTCDate() + ' ' + MONTHS[d.getUTCMonth()] + ' ' + d.getUTCFullYear();
+                var h = d.getUTCHours(), m = d.getUTCMinutes();
+                return { date: date, time: (h === 0 && m === 0) ? '' : pad(h) + ':' + pad(m) };
             }
 
-            const period  = hours >= 12 ? 'PM' : 'AM';
-            const hour12  = hours % 12 === 0 ? 12 : hours % 12;
-            const minStr  = minutes === 0 ? '00' : String(minutes).padStart(2, '0');
-            return `${dayName} ${day} ${month} ${year} at ${hour12}:${minStr} ${period}`;
-        }
-
-        function escapeHtml(str) {
-            const div = document.createElement('div');
-            div.appendChild(document.createTextNode(str || ''));
-            return div.innerHTML;
-        }
-
-        function renderEvents(events) {
-            const container = document.getElementById('events-list');
-
-            if (!events || events.length === 0) {
-                container.innerHTML = '<p class="text-center text-gray-500 text-lg py-12">No upcoming events right now. Check back soon!</p>';
-                return;
+            function empty(message) {
+                list.innerHTML =
+                    '<div class="empty-state">' +
+                    '<h2>' + message + '</h2>' +
+                    '<p class="muted measure">We hold a co-working day every two weeks and one quality event a month. Dates appear here as soon as they are confirmed.</p>' +
+                    '<div class="btn-row"><a class="btn btn-dark" href="index.html#apply">Apply to join</a></div>' +
+                    '</div>';
             }
 
-            const html = events.map(function (event) {
-                const colour  = CATEGORY_COLOURS[event.category] || CATEGORY_COLOURS.other;
-                const badgeHtml = event.category
-                    ? `<span class="category-badge" style="background:${colour}">${escapeHtml(event.category)}</span>`
-                    : '';
-                const locationHtml = event.location
-                    ? `<p class="text-gray-500 text-sm mt-1">
-                           <svg class="inline-block w-4 h-4 mr-1 -mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                           </svg>${escapeHtml(event.location)}
-                       </p>`
-                    : '';
-                const safeUrl = (event.external_url || '').startsWith('http') ? event.external_url : null;
-                const rsvpHtml = safeUrl
-                    ? `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer"
-                           class="inline-block mt-4 bg-saffron text-navy px-5 py-2 rounded-lg font-semibold text-sm hover:bg-orange-400 transition-all duration-200">
-                           RSVP &rarr;
-                       </a>`
-                    : '';
-
-                return `
-                    <div class="event-card bg-white rounded-lg shadow-md p-6 mb-6">
-                        <p class="text-sm text-gray-400 font-medium mb-2">${formatDate(event.event_date)}</p>
-                        <div class="flex flex-wrap items-start gap-3 mb-1">
-                            <h2 class="text-xl font-bold text-navy leading-snug">${escapeHtml(event.title)}</h2>
-                            ${badgeHtml}
-                        </div>
-                        ${locationHtml}
-                        ${rsvpHtml}
-                    </div>`;
-            }).join('');
-
-            container.innerHTML = html;
-        }
-
-        async function loadEvents() {
-            const container = document.getElementById('events-list');
-            try {
-                const response = await fetch('https://app.bizcelona.com/api/events/public');
-                if (!response.ok) throw new Error('API error ' + response.status);
-                const data = await response.json();
-                renderEvents(data.data || []);
-            } catch (e) {
-                console.error('Events load failed:', e);
-                container.innerHTML = '<p class="text-center text-gray-500 text-lg py-12">Could not load events. Please try again later.</p>';
+            function render(events) {
+                if (!events || !events.length) { empty('No dates published yet.'); return; }
+                list.innerHTML = events.map(function (ev) {
+                    var when = formatWhen(ev.event_date);
+                    var url = String(ev.external_url || '');
+                    var safe = /^https?:\/\//i.test(url) ? url : '';
+                    return '<article class="event-card">' +
+                        '<p class="event-date">' + when.date +
+                        (when.time ? '<span class="event-time">' + esc(when.time) + '</span>' : '') + '</p>' +
+                        '<div class="event-body">' +
+                        (ev.category ? '<span class="cat">' + esc(ev.category) + '</span>' : '') +
+                        '<h2>' + esc(ev.title) + '</h2>' +
+                        (ev.location ? '<p class="event-meta">' + esc(ev.location) + '</p>' : '') +
+                        (safe ? '<a class="btn btn-primary" href="' + esc(safe) + '" target="_blank" rel="noopener noreferrer">RSVP</a>' : '') +
+                        '</div></article>';
+                }).join('');
             }
-        }
 
-        document.addEventListener('DOMContentLoaded', loadEvents);
+            fetch(API)
+                .then(function (r) { if (!r.ok) throw new Error('API ' + r.status); return r.json(); })
+                .then(function (data) { render(data.data || []); })
+                .catch(function (e) {
+                    console.error('Events load failed:', e);
+                    empty('We could not load the events just now.');
+                })
+                .then(function () { list.setAttribute('aria-busy', 'false'); });
+        })();
     </script>
 </body>
 </html>

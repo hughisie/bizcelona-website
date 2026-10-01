@@ -1,345 +1,381 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Bizcelona | Business Community in Barcelona</title>
-    <meta name="description" content="Bizcelona is a curated WhatsApp community for entrepreneurs, freelancers, and professionals in Barcelona. Apply to join a trusted network built on collaboration and growth.">
-    <meta name="keywords" content="Barcelona business community, WhatsApp group Barcelona, entrepreneur network Barcelona, Bizcelona, freelancers Barcelona, startup community">
-    <link rel="canonical" href="https://bizcelona.github.io/">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Bizcelona | Business Community in Barcelona" />
-    <meta property="og:description" content="Join Bizcelona – a curated WhatsApp group for entrepreneurs, freelancers, and professionals living in or connected to Barcelona." />
-    <meta property="og:image" content="https://bizcelona.github.io/images/og-image.jpg" />
-    <meta property="og:url" content="https://bizcelona.github.io/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    
-    <!-- Favicon -->
-    <link rel="icon" href="./images/favicon.png" type="image/png" />
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'inter': ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        'navy': '#1a202c',
-                        'saffron': '#f6ad55',
-                        'off-white': '#fafafa',
-                        'beige': '#f7fafc',
-                    }
-                }
-            }
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bizcelona | Barcelona's Business Community by Invitation</title>
+    <meta name="description" content="Bizcelona is a membership community for Barcelona founders, independents and senior business people. Members help each other. Free during the relaunch.">
+    <link rel="canonical" href="https://bizcelona.com/">
+    <meta name="theme-color" content="#1a202c">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Bizcelona">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:title" content="Bizcelona | A room you actually want to be in">
+    <meta property="og:description" content="Barcelona's business community for founders, independents and senior business people. Members help each other. By invitation, free during the relaunch.">
+    <meta property="og:url" content="https://bizcelona.com/">
+    <meta property="og:image" content="https://bizcelona.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Bizcelona logo in off-white on navy, with the line Curated. Collaborative. Connected.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bizcelona | A room you actually want to be in">
+    <meta name="twitter:description" content="Barcelona's business community for founders, independents and senior business people. By invitation, free during the relaunch.">
+    <meta name="twitter:image" content="https://bizcelona.com/images/og-image.jpg">
+
+    <link rel="icon" href="./images/favicon-48.png" type="image/png" sizes="48x48">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+
+    <link rel="preload" href="./fonts/BricolageGrotesque-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./css/site.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://bizcelona.com/#organization",
+          "name": "Bizcelona",
+          "url": "https://bizcelona.com/",
+          "logo": "https://bizcelona.com/images/logo-navy.png",
+          "description": "A membership community for Barcelona founders, independents and senior business people, built on giving before taking.",
+          "areaServed": { "@type": "City", "name": "Barcelona" },
+          "email": "hello@bizcelona.com",
+          "sameAs": ["https://www.linkedin.com/company/110331955"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://bizcelona.com/#website",
+          "url": "https://bizcelona.com/",
+          "name": "Bizcelona",
+          "inLanguage": "en-GB",
+          "publisher": { "@id": "https://bizcelona.com/#organization" }
         }
+      ]
+    }
     </script>
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body class="font-inter text-navy bg-off-white">
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <img src="./images/bizcelona-logo.png" alt="Bizcelona" class="h-8 w-auto">
-                </div>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#hero" class="nav-link text-navy hover:text-saffron transition-colors duration-200">Home</a>
-                        <a href="#about" class="nav-link text-navy hover:text-saffron transition-colors duration-200">About</a>
-                        <a href="#rules" class="nav-link text-navy hover:text-saffron transition-colors duration-200">Guidelines</a>
-                        <a href="#partnerships" class="nav-link text-navy hover:text-saffron transition-colors duration-200">Partnerships</a>
-                        <a href="#apply" class="nav-link text-navy hover:text-saffron transition-colors duration-200">Apply</a>
-                        <a href="events.html" class="nav-link text-navy hover:text-saffron transition-colors duration-200">Events</a>
-                    </div>
-                </div>
-                
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button type="button" class="mobile-menu-button text-navy hover:text-saffron focus:outline-none focus:text-saffron transition-colors duration-200">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Mobile Navigation -->
-        <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-200">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#hero" class="nav-link block px-3 py-2 text-navy hover:text-saffron transition-colors duration-200">Home</a>
-                <a href="#about" class="nav-link block px-3 py-2 text-navy hover:text-saffron transition-colors duration-200">About</a>
-                <a href="#rules" class="nav-link block px-3 py-2 text-navy hover:text-saffron transition-colors duration-200">Guidelines</a>
-                <a href="#partnerships" class="nav-link block px-3 py-2 text-navy hover:text-saffron transition-colors duration-200">Partnerships</a>
-                <a href="#apply" class="nav-link block px-3 py-2 text-navy hover:text-saffron transition-colors duration-200">Apply</a>
-                <a href="events.html" class="nav-link block px-3 py-2 text-navy hover:text-saffron transition-colors duration-200">Events</a>
-            </div>
-        </div>
-    </nav>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
-    <!-- Hero Section -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <!-- Parallax Background -->
-        <div class="absolute inset-0 z-0">
-            <div class="parallax-bg absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('./images/barcelona-skyline-1.jpg');"></div>
-            <div class="absolute inset-0 bg-navy/60"></div>
-        </div>
-        
-        <!-- Content -->
-        <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 opacity-0 animate-fade-in-up" style="animation-delay: 0.2s;">
-                Bizcelona
-            </h1>
-            <p class="text-xl md:text-2xl mb-8 opacity-0 animate-fade-in-up font-light" style="animation-delay: 0.4s;">
-                Barcelona's business community – curated, collaborative, and closed.
-            </p>
-            <a href="#apply" class="btn-primary inline-block bg-saffron text-navy px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-400 transition-all duration-300 transform hover:scale-105 opacity-0 animate-fade-in-up" style="animation-delay: 0.6s;">
-                Apply to Join
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="#hero" aria-label="Bizcelona, back to the top">
+                <img src="./images/logo-offwhite.png" alt="Bizcelona" width="763" height="327">
             </a>
+
+            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                Menu
+            </button>
+
+            <nav id="site-nav" class="nav-panel" aria-label="Main">
+                <ul>
+                    <li><a class="nav-link" data-section="hero" href="#hero">Home</a></li>
+                    <li><a class="nav-link" data-section="about" href="#about">About</a></li>
+                    <li><a class="nav-link" data-section="rules" href="#rules">Guidelines</a></li>
+                    <li><a class="nav-link" data-section="partnerships" href="#partnerships">Partnerships</a></li>
+                    <li><a class="nav-link" href="events.html">Events</a></li>
+                    <li><a class="btn btn-primary" href="#apply">Apply</a></li>
+                </ul>
+            </nav>
         </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white opacity-0 animate-fade-in-up" style="animation-delay: 1s;">
-            <div class="animate-bounce">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                </svg>
-            </div>
-        </div>
-    </section>
+    </header>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="fade-in-on-scroll">
-                    <h2 class="text-4xl md:text-5xl font-bold text-navy mb-6">About Bizcelona</h2>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        At Bizcelona, we are creating a <strong class="text-navy">trusted network of English-speaking entrepreneurs in Barcelona</strong>. Our mission is to cultivate a community where members build lasting, trust-based relationships, inspired by old-world guilds.
-                    </p>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        In Bizcelona, every member is both a resource and a friend, committing to help each other on a no-charge basis, so that support and advice flow freely both ways. By sharing our expertise generously, we all move closer to financial freedom and professional success.
-                    </p>
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        Bizcelona is <strong>more than a networking group</strong>; it is a close-knit community where each member is valued for their camaraderie and collective growth.
-                    </p>
+    <main id="main">
+
+        <!-- Home -->
+        <section id="hero" class="hero section on-navy" aria-labelledby="hero-title">
+            <div class="wrap">
+                <h1 id="hero-title">
+                    <span class="eyebrow">Barcelona's business community<span class="sr-only">.</span></span>
+                    A room you actually want to be <span class="accent">in.</span>
+                </h1>
+                <p class="lede">Members help each other reach their financial and business goals. Real help, real relationships.</p>
+                <div class="btn-row">
+                    <a class="btn btn-primary" href="#apply">Apply to join</a>
+                    <a class="btn btn-ghost" href="#time-bank">See how it works</a>
                 </div>
-                <div class="fade-in-on-scroll">
-                    <div class="relative">
-                        <img src="./images/barcelona-skyline-2.jpg" alt="Barcelona Architecture" class="rounded-lg shadow-xl w-full">
-                        <div class="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent rounded-lg"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Core Values Section -->
-    <section id="rules" class="py-20 bg-beige">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in-on-scroll">
-                <h2 class="text-4xl md:text-5xl font-bold text-navy mb-6">Core Values and Participation Guidelines</h2>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto">At Bizcelona, we believe that the strength of our community lies in active participation, mutual generosity, and a shared sense of trust. Here are the core values and expectations we encourage every member to uphold:</p>
-            </div>
-
-            <div class="space-y-6">
-                <div class="rule-card bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 fade-in-on-scroll">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-10 h-10 bg-saffron rounded-full flex items-center justify-center font-bold text-navy">1</div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-navy mb-2">Give Before You Take</h3>
-                            <p class="text-gray-700 leading-relaxed">We foster a culture where members contribute their knowledge and support before seeking help themselves. Whether it's sharing advice, making introductions, or offering a helping hand, generosity strengthens our network and ensures it thrives for all. Members who consistently give are the ones who gain the most in return.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="rule-card bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 fade-in-on-scroll">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-10 h-10 bg-saffron rounded-full flex items-center justify-center font-bold text-navy">2</div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-navy mb-2">Active Participation</h3>
-                            <p class="text-gray-700 leading-relaxed">We ask members to stay engaged. This means reading group messages regularly, contributing thoughtfully to discussions, and being present in the community. Passive membership dilutes the value we're building together. If you notice a fellow member needs help within your expertise, reach out. Active members drive the culture we all benefit from.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="rule-card bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 fade-in-on-scroll">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-10 h-10 bg-saffron rounded-full flex items-center justify-center font-bold text-navy">3</div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-navy mb-2">Mutual Respect and Trust</h3>
-                            <p class="text-gray-700 leading-relaxed">Our community is built on professionalism, courtesy, and integrity. Treat every member with respect, honor your commitments, and assume positive intent in all interactions. We're building long-term relationships here, not transactional encounters.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="rule-card bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 fade-in-on-scroll">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-10 h-10 bg-saffron rounded-full flex items-center justify-center font-bold text-navy">4</div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-navy mb-2">No Unsolicited Private Messages</h3>
-                            <p class="text-gray-700 leading-relaxed">Before sending a private message to a member, always ask permission in the group or ensure there's an existing relationship. Cold outreach, sales pitches, or unsolicited networking requests undermine trust. If you want to connect privately, introduce yourself in the group first and let relationships develop naturally.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="rule-card bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 fade-in-on-scroll">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-10 h-10 bg-saffron rounded-full flex items-center justify-center font-bold text-navy">5</div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-navy mb-2">No Promotional Posts</h3>
-                            <p class="text-gray-700 leading-relaxed">This is not a marketing channel. Promotional content, hard sells, or thinly-veiled advertisements are not allowed. If your business, product, or service becomes relevant in a conversation, share it naturally and authentically. If you're unsure whether something is promotional, ask an admin first. Repeat offenders will be removed.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="rule-card bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 fade-in-on-scroll">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-10 h-10 bg-saffron rounded-full flex items-center justify-center font-bold text-navy">6</div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-navy mb-2">Privacy and Confidentiality</h3>
-                            <p class="text-gray-700 leading-relaxed">What's shared in Bizcelona stays in Bizcelona. Do not screenshot, share, or republish group content without explicit permission. Respect the privacy of members and treat all discussions as confidential. Trust is the foundation of this community, and breaches of confidentiality are taken seriously.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="rule-card bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 fade-in-on-scroll">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-10 h-10 bg-saffron rounded-full flex items-center justify-center font-bold text-navy">7</div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-navy mb-2">Tiered Involvement</h3>
-                            <p class="text-gray-700 leading-relaxed">Not everyone will engage at the same level, and that's okay. Some members will be highly active, while others will observe and contribute when relevant. We respect different levels of involvement, but we do expect everyone to respect the guidelines and add value when they do participate. If you're rarely active, consider whether this community is the right fit for you—our goal is mutual growth, not passive consumption.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partnerships Section -->
-    <section id="partnerships" class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 fade-in-on-scroll">
-                <h2 class="text-4xl md:text-5xl font-bold text-navy mb-6">Partnerships</h2>
-                <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                    At Bizcelona, we believe in building meaningful, trust-based partnerships that align with our community's values and mission.
+                <ul class="hero-facts" aria-label="At a glance">
+                    <li>By invitation</li>
+                    <li>Free during the relaunch</li>
+                </ul>
+                <p class="hero-strip">
+                    <span>Curated.</span><span>Collaborative.</span><span>Connected.</span>
                 </p>
             </div>
+        </section>
 
-            <div class="fade-in-on-scroll bg-beige rounded-lg p-8 mb-8">
-                <h3 class="text-2xl font-bold text-navy mb-4">Our Partnership Ethos</h3>
-                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-                    We're not interested in transactional sponsorships or superficial brand deals. Instead, we seek partnerships with organizations, businesses, and individuals who share our commitment to mutual support, genuine collaboration, and long-term community growth.
-                </p>
-                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-                    The right partnerships should enhance the member experience, provide real value to our community, and align with our core principle: <strong>give before you take</strong>. Whether it's exclusive member benefits, educational opportunities, or resource sharing, we prioritize quality and relevance over everything else.
-                </p>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                    If you represent an organization that resonates with our values and want to explore how we might work together, we'd love to hear from you. But know that we protect this community fiercely and will only pursue partnerships that genuinely serve our members' interests.
-                </p>
+        <!-- About -->
+        <section id="about" class="section on-light" aria-labelledby="about-title">
+            <div class="wrap">
+                <div class="split about">
+                    <div class="reveal">
+                        <span class="label">Who we are</span>
+                        <h2 id="about-title">Give before <mark>you take.</mark></h2>
+                        <p class="mt-5 lede">Bizcelona is a membership community for Barcelona founders, independents and senior business people.</p>
+                        <div class="mt-5 measure">
+                            <p>Helping is the currency here. Members who help rise; members who only take drift down. We keep it small on purpose: a balanced core of 100 to 150 active members, with every application read personally.</p>
+                            <p>And it is run by the people in it, by a council of senior volunteers, not a one-person show.</p>
+                        </div>
+                        <ul class="not-list measure" aria-label="What Bizcelona is not">
+                            <li>It is not an expensive founder club.</li>
+                            <li>It is not a bar meetup full of people trying to sell each other something.</li>
+                        </ul>
+                    </div>
+                    <figure class="figure reveal">
+                        <img src="./images/barcelona-sunset-1280.jpg" width="1280" height="853" alt="Barcelona rooftops at sunset, with Torre Glòries and the Columbus monument" loading="lazy" decoding="async">
+                        <figcaption>Our city, in warm, low light.</figcaption>
+                    </figure>
+                </div>
+
+                <div class="bet reveal">
+                    <span class="label">Why now</span>
+                    <p class="mb-5 muted measure">As AI eats more desk work, a trusted local network of people who actually show up becomes more valuable every year.</p>
+                    <blockquote>
+                        <p class="display">A group of senior people each giving a bit of focused time can build something great. Nobody gives up their week; just a little time, pointed in the right direction.</p>
+                        <cite>Owen Hughes, founder and chair</cite>
+                    </blockquote>
+                </div>
+
+                <div class="essence">
+                    <div class="reveal">
+                        <h3>Curated.</h3>
+                        <p>A balanced core of active members. Every application reviewed personally.</p>
+                    </div>
+                    <div class="reveal">
+                        <h3>Collaborative.</h3>
+                        <p>Give before you take. Helping is the currency here.</p>
+                    </div>
+                    <div class="reveal">
+                        <h3>Connected.</h3>
+                        <p>Long-term, trust-based relationships with people who show up.</p>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="text-center fade-in-on-scroll">
-                <p class="text-gray-600 mb-6">Interested in partnering with Bizcelona?</p>
-                <a href="#contact" class="btn-primary inline-block bg-navy text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                    Get in Touch
-                </a>
+        <!-- Time bank -->
+        <section id="time-bank" class="section on-navy" aria-labelledby="timebank-title">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="label">How members help each other</span>
+                    <h2 id="timebank-title">The time bank, in four steps.</h2>
+                    <p class="mt-5 lede muted">Search for the skill you need, ask in a line or two, and we introduce you on WhatsApp with context.</p>
+                </div>
+                <ol class="steps">
+                    <li class="step reveal">
+                        <span class="num" aria-hidden="true">1</span>
+                        <h3>Search</h3>
+                        <p>Find the skill you need and see who can help, with their response time and the hours they have given.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="num" aria-hidden="true">2</span>
+                        <h3>Ask</h3>
+                        <p>Say what you need in one or two lines. Asking is free.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="num" aria-hidden="true">3</span>
+                        <h3>Introduce</h3>
+                        <p>We send a WhatsApp introduction to you both, with the context, so nobody starts cold.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="num" aria-hidden="true">4</span>
+                        <h3>24-hour check</h3>
+                        <p>A day later we ask whether you spoke, how useful it was and roughly how much time it took. The helper confirms you got in touch.</p>
+                    </li>
+                </ol>
+                <p class="note">The time bank is <strong>rolling out to members as part of the relaunch.</strong></p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Apply Section -->
-    <section id="apply" class="py-20 bg-beige">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 fade-in-on-scroll">
-                <h2 class="text-4xl md:text-5xl font-bold text-navy mb-6">Apply to Join Bizcelona</h2>
-                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                    Our community is invite-only to ensure it remains high quality and relevant. If you're a business owner, freelancer, or professional in Barcelona, we'd love to hear from you.
-                </p>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                    <strong>We review all applications individually, but aim to get back to all applicants as soon as possible.</strong> If approved, we'll reach out via WhatsApp to welcome you to the community.
-                </p>
+        <!-- Rhythm and ladder -->
+        <section id="rhythm" class="section on-light" aria-labelledby="rhythm-title">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="label">Show up</span>
+                    <h2 id="rhythm-title">A steady rhythm, so people actually meet.</h2>
+                </div>
+                <div class="cards two">
+                    <article class="card reveal">
+                        <span class="label">Every two weeks</span>
+                        <h3>Co-working day</h3>
+                        <p>Focused work at a rotating partner space. Then five minutes each round the table: what you do and one problem you would like help with. Lunch together.</p>
+                    </article>
+                    <article class="card reveal">
+                        <span class="label">Once a month</span>
+                        <h3>One quality event</h3>
+                        <p>Small and practical, such as an AI for beginners session. One good event a month, rather than a calendar full of mixers.</p>
+                    </article>
+                </div>
+                <p class="mt-5 muted">Dates are on the <a class="link-plain" href="events.html">events page</a> as soon as they are confirmed.</p>
             </div>
+        </section>
 
-            <form id="contact" class="contact-form bg-white p-8 rounded-lg shadow-xl fade-in-on-scroll" action="https://formspree.io/f/YOUR_ID" method="POST">
-                <div class="mb-6">
-                    <label for="name" class="block text-sm font-medium text-navy mb-2">Name *</label>
-                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-saffron focus:border-transparent transition-all duration-200">
+        <section id="ladder" class="section on-light" aria-labelledby="ladder-title">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="label">The ladder</span>
+                    <h2 id="ladder-title">One rung at a time. Earned by helping.</h2>
+                    <p class="mt-5 muted measure"><span class="tag-proposed">Proposed</span>A ladder of contribution, not a hierarchy of status. Anyone can move up by helping. These levels go to the council for review.</p>
                 </div>
-
-                <div class="mb-6">
-                    <label for="email" class="block text-sm font-medium text-navy mb-2">Email *</label>
-                    <input type="email" id="email" name="_replyto" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-saffron focus:border-transparent transition-all duration-200">
-                </div>
-
-                <div class="mb-6">
-                    <label for="business" class="block text-sm font-medium text-navy mb-2">Business/Role</label>
-                    <input type="text" id="business" name="business" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-saffron focus:border-transparent transition-all duration-200" placeholder="e.g., Startup Founder, Freelance Designer">
-                </div>
-
-                <div class="mb-6">
-                    <label for="message" class="block text-sm font-medium text-navy mb-2">Tell us about yourself *</label>
-                    <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-saffron focus:border-transparent transition-all duration-200" placeholder="What do you do? What are you working on? How can you contribute to the community?"></textarea>
-                </div>
-
-                <div class="mb-6">
-                    <label class="flex items-start space-x-3">
-                        <input type="checkbox" name="consent" required class="mt-1 h-4 w-4 text-saffron focus:ring-saffron border-gray-300 rounded">
-                        <span class="text-sm text-gray-700">I consent to being contacted by Bizcelona and understand that my application will be reviewed personally.</span>
-                    </label>
-                </div>
-
-                <button type="submit" class="w-full bg-saffron text-navy px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                    Send Application
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-navy text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <img src="./images/bizcelona-logo.png" alt="Bizcelona" class="h-8 w-auto mx-auto mb-4 filter invert">
-                <p class="text-gray-300 mb-2">&copy; 2025 Bizcelona. All rights reserved.</p>
-                <p class="text-gray-400">Built with love in Barcelona.</p>
+                <ol class="ladder">
+                    <li class="rung reveal">
+                        <span class="label">Rung 1</span>
+                        <h3>Member</h3>
+                        <p>Approved, profile complete, two skills listed.</p>
+                    </li>
+                    <li class="rung reveal">
+                        <span class="label">Rung 2</span>
+                        <h3>Core member</h3>
+                        <p>30 points in the last 90 days.</p>
+                    </li>
+                    <li class="rung reveal">
+                        <span class="label">Rung 3</span>
+                        <h3>Host</h3>
+                        <p>Runs events and co-working days, by invitation.</p>
+                    </li>
+                    <li class="rung reveal">
+                        <span class="label">Rung 4</span>
+                        <h3>Council</h3>
+                        <p>The six to eight people who run Bizcelona.</p>
+                    </li>
+                </ol>
             </div>
+        </section>
+
+        <!-- Guidelines -->
+        <section id="rules" class="section on-navy" aria-labelledby="rules-title">
+            <div class="wrap">
+                <div class="split rules">
+                    <div class="sticky reveal">
+                        <span class="label">House rules</span>
+                        <h2 id="rules-title">What's shared in Bizcelona <span class="accent">stays in Bizcelona.</span></h2>
+                        <p class="mt-5 muted measure">Seven rules. They are short because we expect you to use judgement.</p>
+                    </div>
+                    <ol class="rules-list">
+                        <li class="reveal">
+                            <div>
+                                <h3>Give Before You Take</h3>
+                                <p>Share what you know, make introductions and lend a hand before you ask for help yourself. The members who give are the ones who gain most.</p>
+                            </div>
+                        </li>
+                        <li class="reveal">
+                            <div>
+                                <h3>Active Participation</h3>
+                                <p>Stay in the conversation. Read the group, reply thoughtfully, and reach out when you spot someone who needs what you know. A passive membership dilutes what we are building.</p>
+                            </div>
+                        </li>
+                        <li class="reveal">
+                            <div>
+                                <h3>Mutual Respect and Trust</h3>
+                                <p>Be professional and courteous, keep your commitments and assume good intent. We are building long-term relationships, not transactions.</p>
+                            </div>
+                        </li>
+                        <li class="reveal">
+                            <div>
+                                <h3>No Unsolicited Private Messages</h3>
+                                <p>Ask in the group first, or have an existing relationship, before you message someone privately. Cold outreach and sales pitches break trust. Introduce yourself in the group and let it grow from there.</p>
+                            </div>
+                        </li>
+                        <li class="reveal">
+                            <div>
+                                <h3>No Promotional Posts</h3>
+                                <p>This is not a marketing channel. No hard sells, no thinly disguised adverts. If your work is relevant to a conversation, say so naturally. Not sure? Ask an admin first. Repeat offenders are removed.</p>
+                            </div>
+                        </li>
+                        <li class="reveal">
+                            <div>
+                                <h3>Privacy and Confidentiality</h3>
+                                <p>Do not screenshot, share or republish anything from the group without permission. Treat what members tell you as confidential. Breaches are taken seriously.</p>
+                            </div>
+                        </li>
+                        <li class="reveal">
+                            <div>
+                                <h3>Tiered Involvement</h3>
+                                <p>Not everyone is active at the same level, and that is fine. But everyone follows these rules and adds value when they take part. If you are rarely around, ask yourself whether this is the right fit. We are after mutual growth, not passive consumption.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partnerships -->
+        <section id="partnerships" class="section on-light" aria-labelledby="partners-title">
+            <div class="wrap">
+                <div class="section-head reveal">
+                    <span class="label">Partnerships</span>
+                    <h2 id="partners-title">Partners who give before they <mark>take.</mark></h2>
+                    <p class="mt-5 lede">We want partnerships that make the member experience better, not transactional sponsorships or brand deals.</p>
+                </div>
+                <div class="measure reveal">
+                    <p>The right partner shares our commitment to mutual support, real collaboration and long-term community growth. That might be exclusive member benefits, educational opportunities or shared resources. We put quality and relevance ahead of everything else, and we only pursue partnerships that genuinely serve our members.</p>
+                </div>
+                <div class="partner-grid">
+                    <div class="panel reveal">
+                        <h3>Venue partners</h3>
+                        <p>Our co-working days rotate between partner spaces, and our monthly event needs a good room. If you run a space that suits focused work and lunch together, we would like to hear from you.</p>
+                    </div>
+                    <div class="panel reveal">
+                        <h3>Perks and sponsors</h3>
+                        <p>If you offer something members would use, such as a perk, a workshop or a resource, tell us what and why. We will say yes only when it is useful.</p>
+                    </div>
+                </div>
+                <div class="btn-row">
+                    <a class="btn btn-dark" href="mailto:hello@bizcelona.com?subject=Partnering%20with%20Bizcelona">Get in touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apply -->
+        <section id="apply" class="section on-navy" aria-labelledby="apply-title">
+            <div class="wrap">
+                <div class="apply-grid">
+                    <div class="reveal">
+                        <span class="label">Apply</span>
+                        <h2 id="apply-title">Bizcelona is by invitation. <span class="accent">Free</span> during the relaunch.</h2>
+                        <p class="mt-5 lede">If you are a founder, independent or senior business person in Barcelona, we would like to hear from you.</p>
+                        <p class="mt-5 muted measure">We keep the mix balanced. Right now we would especially like to hear from people in SEO, web, retail, legal and tax, finance, hospitality, and trades and craft.</p>
+                    </div>
+                    <div>
+                        <ol class="apply-steps reveal">
+                            <li><div><strong>Create your account</strong><span>On the member app. It takes a couple of minutes.</span></div></li>
+                            <li><div><strong>Tell us what you do and what you can help with</strong><span>Help is the currency here, so list what you can offer.</span></div></li>
+                            <li><div><strong>We read every application personally</strong><span>If you are approved, we welcome you on WhatsApp.</span></div></li>
+                        </ol>
+                        <div id="contact" class="mt-6 apply-box reveal">
+                            <h3>Ready?</h3>
+                            <p>Membership is free during the relaunch. We will prove the value before we ever charge.</p>
+                            <div class="btn-row">
+                                <a class="btn btn-primary" href="https://app.bizcelona.com/signup">Apply on the member app</a>
+                                <a class="btn btn-ghost" href="https://app.bizcelona.com/login">Member log in</a>
+                            </div>
+                            <p style="margin-top: var(--s5); font-size: 0.9375rem">Questions first? Write to <a href="mailto:hello@bizcelona.com">hello@bizcelona.com</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-grid">
+            <div>
+                <img src="./images/logo-offwhite.png" alt="Bizcelona" width="763" height="327">
+                <p class="mt-4 footer-meta">&copy; 2026 Bizcelona. Built with love in Barcelona.</p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="events.html">Events</a></li>
+                <li><a href="https://www.linkedin.com/company/110331955" rel="noopener">LinkedIn</a></li>
+                <li><a href="mailto:hello@bizcelona.com">hello@bizcelona.com</a></li>
+            </ul>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="./js/script.js"></script>
+    <script src="./js/site.js" defer></script>
 </body>
 </html>
-
